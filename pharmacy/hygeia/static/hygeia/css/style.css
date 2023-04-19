@@ -1,0 +1,215 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html,
+a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  list-style-type: none;
+}
+
+.life-bg {
+  background-color: #AFEEEE;
+}
+
+.c-border {
+  border: solid transparent;
+  border-radius: 2%;
+}
+
+.c-link {
+  background-color: #191970;
+  color: wheat;
+  padding: 10px;
+  border: solid transparent;
+  border-radius: 2%;
+}
+
+.c-link:hover {
+  color: #000;
+  background-color: #e0ffff;
+}
+
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+  background-color: #faebd7;
+}
+
+.img-left-border {
+  border-right: solid transparent;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.light-green {
+  border: solid transparent;
+  border-radius: 50%;
+  background-color: #afeeee;
+}
+
+
+/*typing animation*/
+.typing-animation {
+  overflow: hidden;
+  /* Ensures the content is not visible */
+  border-right: .15em solid orange;
+  /* The typewriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0;
+  /* Removes default margin */
+  letter-spacing: .15em;
+  /* Adjusts letter spacing */
+  animation: typing 5s steps(40, end);
+  /* The typing animation */
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+
+
+.trending {
+  background-color: #afeeee;
+}
+
+
+/*carousel*/
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item>div {
+    display: none;
+  }
+
+  .carousel-inner .carousel-item>div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+
+.card-hover:hover {
+  background-color: #e0ffff;
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.buts,
+.price,
+.spec-consultation {
+  color: #191970;
+}
+
+.card-title,
+.figure-caption,
+.footer,
+.profile {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.border-curated {
+  border: solid transparent;
+  border-radius: 5%;
+}
+
+.all-link:hover {
+  background-color: #e0ffff;
+  color: #000;
+  border: solid transparent;
+  border-radius: 10%;
+}
+
+/*store*/
+.profile img {
+  width: 50px;
+}
+
+.icon-logo {
+  padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+
+  .font-size,
+  .none {
+    display: none;
+  }
+}
+
+/*defining styles for small screens*/
+@media (max-width: 768px) {
+  .margin-top {
+    margin-top: 13%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .xtra-small {
+    font-size: 8px;
+  }
+}
+
+/*end of media query for small screens*/
+
+/*category horizontal navbar*/
+.margin-top {
+  margin-top: 9%;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: sticky;
+  top: 10%;
+  z-index: 9999;
+}
+
+.margin-top a {
+  color: #191970;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+
+.margin-top ul {
+  list-style-type: none;
+}
+/*end*/

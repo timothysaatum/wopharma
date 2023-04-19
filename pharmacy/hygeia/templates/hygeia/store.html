@@ -1,0 +1,407 @@
+{% extends 'hygeia/base.html' %}
+{% load static %}
+{% block title %}Store | Wo'pharma{% endblock title %}
+
+{% block content %}
+<!--store top bar-->
+<section class="mx-2 d-flex justify-content-between fixed-top bg-light scroll-bg shadow p-2">
+    <div class="icon-logo">
+        <a href="#" class="profile"><img src="{% static 'hygeia/images/wopharma.png'%}"
+                class="rounded-circle image-fluid border spec-consultation" alt="pharmacy logo">
+            <small class="fw-bolder font-size">@MekPharmaceutics</small>
+        </a>
+    </div>
+    <div class="d-flex align-items-center">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search item" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+    <div class="d-flex align-items-center px-2">
+        <a class="btn btn-outline-success d-block d-sm-none d-md-block d-lg-none" href="#show" role="button"><i
+                class="fa-solid fa-bars"></i><span class="xtra-small d-none d-sm-block">menu</span>
+        </a>
+    </div>
+</section>
+<!--end of top bar-->
+<section class="margin-top pt-2 overlow-scroll border bg-light px-4 d-none d-md-none d-lg-block" id="show">
+    <div>
+        <ul class="d-flex justify-content-between">
+            <li><a href="#">Baby Food</a></li>
+            <li><a href="#">Sundries</a></li>
+            <li><a href="#">over the counter</a></li>
+            <li><a href="#">Cosmetics</a></li>
+            <li><a href="#">Home Care</a></li>
+            <li><a href="#">Herbal</a></li>
+            <li><a href="#">Snack/Confectionary</a></li>
+            <li><a href="#">Sex &amp; Enhancement</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="container-fluid overflow-hidden mt-5">
+    <div class="row d-flex justify-content-center">
+        <hr>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+            <a href="#">
+                <figure class="figure">
+                    <div class="d-flex justify-content-between">
+                        <small class="card-title"><span class="red">Men's Health</span> <span></small>
+                        <small class="fw-bolder price">Ghs 20.00</small>
+                    </div>
+                    <div class="text-center">
+                        <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
+                            alt="first product">
+                    </div>
+                    <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+                        <strong>
+                            <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
+                        </strong>
+                    </figcaption>
+                </figure>
+            </a>
+            <div class="d-flex justify-content-between border-top buts">
+                <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
+                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
