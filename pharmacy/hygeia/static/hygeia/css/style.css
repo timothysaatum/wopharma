@@ -44,6 +44,10 @@ div.scrollmenu a:hover {
   display: none;
   /* Chrome, Safari and Opera */
 }
+/*scroll bar*/
+.scrollmenu::-webkit-scrollbar {
+  height: 8px;
+}
 
 /*end of scroll menu*/
 .life-bg {
@@ -284,41 +288,4 @@ h6,
   right: 4%;
 }
 
-/*scroll bar*/
-::-webkit-scrollbar {
-  height: 8px;
-}
 
-::-webkit-scrollbar-track {
-  background-color: #f2f2f2;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #aaa;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
-/* Add chevron shape to scrollbar thumb */
-::-webkit-scrollbar-thumb:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  width: 10px;
-  height: 10px;
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
-}
-
-/* Add arrow shape to scrollbar thumb on hover */
-::-webkit-scrollbar-thumb:hover:before {
-  border-bottom: 2px solid #555;
-  border-right: 2px solid #555;
-}

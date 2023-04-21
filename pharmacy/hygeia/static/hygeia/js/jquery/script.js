@@ -5,4 +5,6 @@ $(document).ready(function() {
   $(window).on('scroll', function () {
     $('.scroll-bg').css('background-color', 'wheat')
   });
+  //just dey pla
+  
 });
