@@ -700,104 +700,161 @@
 <!--categories third section-->
 <section class="mt-4">
   <div class="container">
-    <h1 class="m-2 text-decoration-underline">Also</h1>
-    <div class="row d-flex justify-content-between">
-      <!--herbal-->
-      <div class="col-md-4 bg-light shadow" data-aos="fade-up">
-        <h1 class="h6 p-2 fw-bolder">Snacks & Confectioneries</h1>
-        <!--inner row for herbal-->
+  <h1 class="text-decoration-underline">Also</h1>
+    <div class="row">
+      <!--vitamins and supplement-->
+      <div class="col-md-3 m-1 bg-light shadow" data-aos="fade-up">
+        <h1 class="h6 p-2 fw-bolder">Sex &amp; Enhancement</h1>
+        <!--inner row for vitamins-->
         <div class="row">
-          <div class="col-md-6 col-sm-3 d-flex justify-content-between">
+          <!--shows only on smaller screens-->
+          <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
               <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
             </div>
-            <div class="d-block d-md-none">
+            <div>
               <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+          <!--end of show on only small screens-->
+          <div class="col-md-6 d-none d-sm-block border">
+            <a href="#" class="text-dark">
+              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
               <p class="fw-bolder mb-1">Vitamin syrup</p>
               <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a>
             </a>
           </div>
           <div class="col-md-6 d-none d-sm-block d-md-block border">
             <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
               <p class="fw-bolder mb-1">Vitamin syrup</p>
               <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+              </a>
               </a>
           </div>
           <div class="col-md-6 d-none d-sm-block d-md-block border">
             <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
               <p class="fw-bolder mb-1">Vitamin syrup</p>
               <p class="fw-bolder mt-1">Price: Ghs20.0</p>
               </a>
+              </a>
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a>
           </div>
         </div>
         <div class="d-none d-md-block">
           <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
         </div>
       </div>
-      <!--end of herbal-->
-      <!--Sex & Enhancement-->
-      <div class="col-md-4 bg-light shadow" data-aos="fade-up">
+      <!--end of vitamins and supplement-->
+      <!--baby food-->
+      <div class="col-md-3 m-1 bg-light shadow" data-aos="fade-up">
+        <h1 class="h6 p-2 fw-bolder mt-2">Cosmetics</h1>
+        <!--inner row for baby food-->
+        <div class="row">
+          <!--show on only small screens-->
+          <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
+            <div class="border m-1">
+              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+            </div>
+            <div>
+              <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
+              <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
+            </div>
+          </div>
+          <!--end of show on only small screens-->
+          <div class="col-md-6 d-none d-sm-block border">
+            <a href="#" class="text-dark">
+              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a>
+            </a>
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <a href="#" class="text-dark">
+              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+              </a>
+              </a>
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <a href="#" class="text-dark">
+              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+              </a>
+              </a>
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a>
+          </div>
+        </div>
+        <div class="d-none d-md-block">
+          <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
+        </div>
+      </div>
+      <div class="col-md-5 m-1 bg-light shadow" data-aos="fade-up">
         <h1 class="h6 p-2 fw-bolder mt-2">Home Care</h1>
-        <!--inner row for Sex & Enhancement-->
+        <!--inner row for baby food-->
         <div class="row">
-          <div class="col-md-6 col-sm-3 d-flex justify-content-between">
+          <!--show on only small screens-->
+          <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
               <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
             </div>
-            <div class="d-block d-md-none">
-              <small>Get it right tonight. Let the feelings be memorable</small>
+            <div>
+              <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+          <!--end of show on only small screens-->
+          <div class="col-md-6 d-none d-sm-block border">
+            <a href="#" class="text-dark">
+              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a>
+            </a>
           </div>
           <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+            <a href="#" class="text-dark">
+              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+              </a>
+              </a>
           </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+          <div class="col-md-6 d-none d-sm-block d-md-block d-lg-none border">
+            <a href="#" class="text-dark">
+              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+              </a>
+              </a>
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block d-lg-none border">
+            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a>
           </div>
         </div>
         <div class="d-none d-md-block">
           <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
         </div>
       </div>
-      <!--cosmetics-->
-      <div class="col-md-3 bg-light shadow" data-aos="fade-up">
-        <h1 class="h6 p-2 fw-bolder mt-2">Sundries</h1>
-        <div class="row">
-          <div class="col-md-6 col-sm-3 d-flex justify-content-between">
-            <div class="border m-1">
-              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
-            </div>
-            <div class="d-block d-md-none">
-              <small>Get it right tonight. Let the feelings be memorable</small>
-              <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
-          </div>
-        </div>
-        <div class="d-none d-md-block">
-          <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
-        </div>
-      </div>
-      <!--end of cosmetics-->
     </div>
   </div>
 </section>
