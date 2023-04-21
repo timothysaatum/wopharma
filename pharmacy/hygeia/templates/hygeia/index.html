@@ -3,336 +3,226 @@
 {% block title %}Home | Wo'pharma{% endblock title %}
 
 {% block content %}
-<section class="mt-2 mb-5 d-flex justify-content-center fixed-top">
-  <div class="mb-5 d-flex justify-content-between scroll-bg">
+<section class="mx-2 d-flex justify-content-between top bg-light scroll-bg shadow p-2">
+  <div class="icon-logo">
+    <a href="#" class="profile"><img src="{% static 'hygeia/images/wopharma.png'%}"
+        class="rounded-circle image-fluid border spec-consultation" alt="pharmacy logo">
+      <small class="fw-bolder font-size">@wopharma</small>
+    </a>
+  </div>
+  <div class="d-flex align-items-center">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search item" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+  </div>
+  <div class="d-flex align-items-center px-2">
+    <a class="btn btn-outline-success d-block d-sm-none d-md-block d-lg-none" href="#show" role="button"><i
+        class="fa-solid fa-bars"></i><span class="xtra-small d-none d-sm-block">menu</span>
+    </a>
+  </div>
+</section>
+<!--end of top bar-->
+<!--booking specialist section-->
+<section class="mt-2 mb-2 d-flex justify-content-center stick-top">
+  <div class="d-flex justify-content-between scroll-bg">
     <small class="p-3 fw-bolder spec-consultation">Not sure of what to buy?</small>
     <span><i class="fa-solid fa-arrow-right p-3 green"></i></span>
-    <a href="#" class="p-3 fw-bolder spec-consultation"> Book specialist consultation</a>
+    <a href="#" class="p-3 fw-bolder spec-consultation"> Talk to a specialist</a>
   </div>
 </section>
-<section class="mt-5 life-bg">
-  <div class="container-fluid p-3 c-border">
-    <div class="row" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="col-md-6 col-sm-12">
-        <img src="{% static 'hygeia/images/g.gif' %}" class="w-100 img-left-border d-none d-sm-block" alt="#">
-      </div>
-      <div class="col-md-4 col-sm-12 text-center d-flex justify-content-end align-items-center">
-        <div>
-          <h1 class="fw-bolder">Wo'<span class="green">Pharma</span></h1>
-          <p class="hero">Your pharmacy for life. Your life counts a billion times to us.</p>
-          <p class="pb-4">Sign up for a Wo'<span class="green">Pharma</span> account today and get <span class="red">10%
-              discount</span> on every item purchased</p>
-          <a href="#" class="c-link">Sign up today</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--products category-->
-<section class="mt-5 p-4">
+<!--end of specialist section-->
+<!--categories first section-->
+<section class="mt-4">
   <div class="container">
-    <h1 class="text-center text-decoration-underline pb-4 mb-3 fw-lighter font-monospace text-uppercase"
-      data-aos="fade-up" data-aos-anchor-placement="top-bottom"><span class="red">!</span>Important. How it works</h1>
+    <h1 class="text-capitalize text-decoration-underline">What is there for you</h1>
     <div class="row d-flex justify-content-between">
-      <div class="col-md-4 col-sm-12 border-end border-start" data-aos="fade-down">
-        <span class="p-4"><i class="fa-solid fa-cart-plus fa-2x light-green text-success p-3"></i></span>
-        <a href="#" title="flow chart">
-          <h3 class="green text-decoration-underline">1. Fast Delivery</h3>
-        </a>
-        <p class="hero">When you make an order through our site. We map you to a delivery &amp; a pharmacy that is close
-          to you so that your drugs can get to you as soon as possible at the comfort of your location.</p>
-        <a href="#" class="text-success stext-muted text-uppercase" title="flow chart">Read more <span><i
-              class="fa-solid fa-chevron-right"></i></span></a>
-      </div>
-      <div class="col-md-4 col-sm-12 border-end" data-aos="fade-right">
-        <span class="p-4"><i class="fa-solid fa-truck-fast fa-2x light-green text-success p-3"></i></span>
-        <a href="#" title="clinicians">
-          <h3 class="green text-decoration-underline">2. New Medicines Everyday</h3>
-        </a>
-        <p class="hero">We work with so many reliable pharmaceutical companies &amp; shops with thousand sign ups a day
-          who provide us with constant supply of
-          drugs so we never run out of supplies.</p>
-        <a href="#" class="text-success stext-muted text-uppercase" title="Pharmacies">Read more <span><i
-              class="fa-solid fa-chevron-right"></i></span></a>
-      </div>
-      <div class="col-md-4 col-sm-12 border-end" data-aos="fade-left">
-        <span class="p-4"><i class="fa-solid fa-shield-halved fa-2x light-green text-success p-3"></i></span>
-        <a href="#" title="clinicians">
-          <h3 class="green text-decoration-underline">3. Quality Guranteed</h3>
-        </a>
-        <p class="hero">You can book a consultation with any clinician of your choice. The prescriptions will be relayed
-          to the nearest pharmacy and delivery for easy pick up.</p>
-        <a href="#" class="text-success stext-muted text-uppercase" title="clinicians">Read more <span><i
-              class="fa-solid fa-chevron-right"></i></span></a>
-      </div>
-    </div>
-  </div>
-</section>
-<!--Trending section-->
-<section class="mt-5">
-  <div class="container">
-    <h1 class="text-center text-decoration-underline fw-lighter font-monospace text-uppercase" data-aos="fade-up"
-      data-aos-anchor-placement="top-bottom">Our Products</h1>
-    <div class="text-center mb-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <small>Your prescriptions for savings, convenience & wellness.</small>
-    </div>
-    <div class="d-flex justify-content-between trending px-3" data-aos="fade-up">
-      <h6 class="p-3 text-success"><span class="red p-2">Trending</span> <span><i
-            class="fa-solid fa-chevron-right"></i></span></h6>
-      <a href="#" class="text-success fw-bolder mt-3"><span class="red">See All</span> <span><i
-            class="fa-solid fa-chevron-right"></i></span> </a>
-    </div>
-    <div class="text-center my-3" data-aos="fade-up">
-      <div class="row mx-auto my-auto justify-content-center">
-        <div id="recipeCarousel1" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <div class="col-md-3">
-                <div class="card card-hover">
-                  <a href="#">
-                    <div class="card-img-overlay text-start">
-                      <small class="card-title"><span class="red">Minerals</span> <span></small>
-                    </div>
-                  </a>
-                  <div class="card-img">
-                    <img src="{% static 'hygeia/images/product2.png' %}" class="img-fluid">
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Achetylcholine 200mg</h5>
-                    <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                  </div>
-                </div>
-              </div>
+      <!--vitamins and supplement-->
+      <div class="col-md-4 bg-light shadow" data-aos="fade-up">
+        <h1 class="h6 p-2 fw-bolder">Vitamins & supplements</h1>
+        <!--inner row for vitamins-->
+        <div class="row">
+          <div class="col-md-6 col-sm-3 d-flex justify-content-between">
+            <div class="border m-1">
+              <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
             </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <div class="card card-hover">
-                  <a href="#">
-                    <div class="card-img-overlay text-start">
-                      <small class="card-title"><span class="red">Sundries</span> <span></small>
-                    </div>
-                  </a>
-                  <div class="card-img">
-                    <img src="{% static 'hygeia/images/product4.png' %}" class="img-fluid">
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Achetylcholine 200mg</h5>
-                    <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <div class="card card-hover">
-                  <a href="#">
-                    <div class="card-img-overlay text-start">
-                      <small class="card-title"><span class="red">Herbal</span> <span></small>
-                    </div>
-                  </a>
-                  <div class="card-img">
-                    <img src="{% static 'hygeia/images/product4.png' %}" class="img-fluid">
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Achetylcholine 200mg</h5>
-                    <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <div class="card card-hover">
-                  <a href="#">
-                    <div class="card-img-overlay text-start">
-                      <small class="card-title"><span class="red">Cosmetics</span> <span></small>
-                    </div>
-                  </a>
-                  <div class="card-img">
-                    <img src="{% static 'hygeia/images/product1.png' %}" class="img-fluid">
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Achetylcholine 200mg</h5>
-                    <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <div class="card card-hover">
-                  <a href="#">
-                    <div class="card-img-overlay text-start">
-                      <small class="card-title"><span class="red">Baby Food</span> <span></small>
-                    </div>
-                  </a>
-                  <div class="card-img">
-                    <img src="{% static 'hygeia/images/product4.png' %}" class="img-fluid">
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Achetylcholine 200mg</h5>
-                    <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <div class="card card-hover">
-                  <a href="#">
-                    <div class="card-img-overlay text-start">
-                      <small class="card-title"><span class="red">Men's Health</span> <span></small>
-                    </div>
-                  </a>
-                  <div class="card-img">
-                    <img src="{% static 'hygeia/images/product2.png' %}" class="img-fluid">
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Achetylcholine 200mg</h5>
-                    <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                  </div>
-                </div>
-              </div>
+            <div class="d-block d-md-none">
+              <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
+              <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
-          <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel1" role="button"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </a>
-          <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel1" role="button"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </a>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <a href="#" class="text-dark">
+              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a>
+            </a>
+            </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <a href="#" class="text-dark">
+              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a>
+            </a>
+            </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins"
+                class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a>
+          </div>
         </div>
+        <div class="d-none d-md-block">
+          <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
+        </div>
+        </div>
+      <!--end of vitamins and supplement-->
+      <!--baby food-->
+      <div class="col-md-4 bg-light shadow" data-aos="fade-up">
+        <h1 class="h6 p-2 fw-bolder mt-2">Baby Food</h1>
+        <!--inner row for baby food-->
+        <div class="row">
+          <div class="col-md-6 col-sm-3 d-flex justify-content-between">
+            <div class="border m-1">
+              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+            </div>
+            <div class="d-block d-md-none">
+              <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
+              <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
+            </div>
+            </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a></a>
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a>
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins"
+                class="w-100 img-fluid">
+              <p class="fw-bolder mb-1">Vitamin syrup</p>
+              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            </a>
+          </div>
+          </div>
+        <div class="d-none d-md-block">
+          <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
+        </div>
+        </div>
+      <div class="col-md-3 bg-light shadow text-center p-3" data-aos="fade-up">
+        <h1 class="h6 fw-bolder mt-2 text-warning">Join today and get 10% discount</h1>
+        <p>It is free and easy</p>
+        <a href="#" class="green special-link p-2">Create account</a>
+        <p class="pt-3 d-none d-sm-block">Get the feelings of what it means to be part of this family.</p>
+        <a href="#" class="text-muted text-decoration-underline">sign in</a>
       </div>
     </div>
   </div>
 </section>
-<div class="d-flex justify-content-center mt-5 mb-5">
-  <a href="#" class="c-link">See all products</a>
-</div>
-<hr>
-<!--sample products-->
-<section class="mt-5">
+<!--end of categories first section-->
+<!--categories second section-->
+<section class="mt-4">
   <div class="container">
-    <div class="d-flex justify-content-between trending px-3" data-aos="fade-up">
-      <h6 class="p-3 text-success"><span class="red p-2 text-capitalize">Latest arrivals</span> <span><i
-            class="fa-solid fa-chevron-right"></i></span></h6>
-      <a href="#" class="text-success fw-bolder mt-3"><span class="red">See All</span> <span><i
-            class="fa-solid fa-chevron-right"></i></span> </a>
-    </div>
-    <div class="text-center my-3" data-aos="fade-up">
-      <div class="row mx-auto my-auto justify-content-center">
-        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <div class="col-md-3">
-                <div class="card">
-                  <a href="#" class="card-hover">
-                    <div class="card-img">
-                      <img src="{% static 'hygeia/images/product2.png' %}" class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Achetylcholine 200mg</h5>
-                      <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+    <div class="row d-flex justify-content-between">
+      <!--herbal-->
+      <div class="col-md-4 bg-light shadow" data-aos="fade-up">
+        <h1 class="h6 p-2 fw-bolder">Herbal Medicine</h1>
+    
+        <!--inner row for herbal-->
+        <div class="row">
+          <div class="col-md-6 col-sm-3 d-flex justify-content-between">
+            <div class="border m-1">
+              <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
             </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <div class="card">
-                  <a href="#" class="card-hover">
-                    <div class="card-img">
-                      <img src="{% static 'hygeia/images/product4.png' %}" class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Achetylcholine 200mg</h5>
-                      <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+            <div class="d-block d-md-none">
+              <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
+              <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <div class="card">
-                  <a href="#" class="card-hover">
-                    <div class="card-img">
-                      <img src="{% static 'hygeia/images/product4.png' %}" class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Achetylcholine 200mg</h5>
-                      <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                    </div>
-                  </a>
-                </div>
-              </div>
             </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <div class="card">
-                  <a href="#" class="card-hover">
-                    <div class="card-img">
-                      <img src="{% static 'hygeia/images/product1.png' %}" class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Achetylcholine 200mg</h5>
-                      <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+        </div>
+        <div class="d-none d-md-block">
+          <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
+        </div>
+        </div>
+      <!--end of herbal-->
+      <!--Sex & Enhancement-->
+      <div class="col-md-4 bg-light shadow" data-aos="fade-up">
+        <h1 class="h6 p-2 fw-bolder mt-2">Sex & Enhancement</h1>
+        <!--inner row for Sex & Enhancement-->
+        <div class="row">
+          <div class="col-md-6 col-sm-3 d-flex justify-content-between">
+            <div class="border m-1">
+              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
             </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <div class="card">
-                  <a href="#" class="card-hover">
-                    <div class="card-img">
-                      <img src="{% static 'hygeia/images/product2.png' %}" class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Achetylcholine 200mg</h5>
-                      <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-md-3">
-                <div class="card">
-                  <a href="#" class="card-hover">
-                    <div class="card-img">
-                      <img src="{% static 'hygeia/images/product2.png' %}" class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Achetylcholine 200mg</h5>
-                      <p class="card-text"><small class="text-muted">Ghs 20.00</small></p>
-                    </div>
-                  </a>
-                </div>
-              </div>
+            <div class="d-block d-md-none">
+              <small>Get it right tonight. Let the feelings be memorable</small>
+              <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
-          <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </a>
-          <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </a>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          </div>
+        <div class="d-none d-md-block">
+          <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
+        </div>
+        </div>
+      <!--cosmetics-->
+      <div class="col-md-3 bg-light shadow" data-aos="fade-up">
+        <h1 class="h6 p-2 fw-bolder mt-2">Cosmetics</h1>
+        <div class="row">
+          <div class="col-md-6 col-sm-3 d-flex justify-content-between">
+            <div class="border m-1">
+              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+            </div>
+            <div class="d-block d-md-none">
+              <small>Get it right tonight. Let the feelings be memorable</small>
+              <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
+            </div>
+            </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          </div>
+        <div class="d-none d-md-block">
+          <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
         </div>
       </div>
+      <!--end of cosmetics-->
     </div>
   </div>
 </section>
-<div class="d-flex justify-content-center mt-5 mb-5">
-  <a href="#" class="c-link">See all products</a>
-</div>
-<hr>
+<!--end of categories second section-->
 <!--just for you section-->
 <div class="d-flex justify-content-center mt-5 mb-5 text-decoration-underline">
   <h1>Curated Just For You</h1>
@@ -340,7 +230,7 @@
 <hr>
 <section class="container-fluid overflow-hidden">
   <div class="row d-flex justify-content-center">
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -364,7 +254,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -388,7 +278,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -412,7 +302,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -436,7 +326,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -460,7 +350,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -484,7 +374,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -508,7 +398,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -532,7 +422,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -556,7 +446,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -580,7 +470,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -604,7 +494,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -628,7 +518,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -652,7 +542,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -676,7 +566,7 @@
         <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
       </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 m-1 p-3 border-curated bg-light shadow" data-aos="fade-up">
+    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
       <a href="#">
         <figure class="figure">
           <div class="d-flex justify-content-between">
@@ -705,7 +595,125 @@
     <a href="#" class="green all-link p-2">View all Products <i class="fa-solid fa-chevron-right"></i></a>
   </div>
 </section>
-<section class="mt-3 mb-3">
-
+<!--categories third section-->
+<section class="mt-4">
+  <div class="container">
+    <h1 class="m-2 text-decoration-underline">Also</h1>
+    <div class="row d-flex justify-content-between">
+      <!--herbal-->
+      <div class="col-md-4 bg-light shadow" data-aos="fade-up">
+        <h1 class="h6 p-2 fw-bolder">Snacks & Confectioneries</h1>
+        <!--inner row for herbal-->
+        <div class="row">
+          <div class="col-md-6 col-sm-3 d-flex justify-content-between">
+            <div class="border m-1">
+              <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+            </div>
+            <div class="d-block d-md-none">
+              <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
+              <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+        </div>
+        <div class="d-none d-md-block">
+          <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
+        </div>
+      </div>
+      <!--end of herbal-->
+      <!--Sex & Enhancement-->
+      <div class="col-md-4 bg-light shadow" data-aos="fade-up">
+        <h1 class="h6 p-2 fw-bolder mt-2">Home Care</h1>
+        <!--inner row for Sex & Enhancement-->
+        <div class="row">
+          <div class="col-md-6 col-sm-3 d-flex justify-content-between">
+            <div class="border m-1">
+              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+            </div>
+            <div class="d-block d-md-none">
+              <small>Get it right tonight. Let the feelings be memorable</small>
+              <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+        </div>
+        <div class="d-none d-md-block">
+          <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
+        </div>
+      </div>
+      <!--cosmetics-->
+      <div class="col-md-3 bg-light shadow" data-aos="fade-up">
+        <h1 class="h6 p-2 fw-bolder mt-2">Sundries</h1>
+        <div class="row">
+          <div class="col-md-6 col-sm-3 d-flex justify-content-between">
+            <div class="border m-1">
+              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+            </div>
+            <div class="d-block d-md-none">
+              <small>Get it right tonight. Let the feelings be memorable</small>
+              <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+          <div class="col-md-6 d-none d-sm-block d-md-block border">
+            <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+          </div>
+        </div>
+        <div class="d-none d-md-block">
+          <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
+        </div>
+      </div>
+      <!--end of cosmetics-->
+    </div>
+  </div>
 </section>
+<!--end of categories third section-->
+<!--sign up-->
+<section class="mt-5 life-bg">
+  <div class="container-fluid p-3 c-border">
+    <div class="row" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <div class="col-md-6 col-sm-12">
+        <img src="{% static 'hygeia/images/g.gif' %}" class="w-100 img-border d-none d-sm-block" alt="#">
+      </div>
+      <div class="col-md-4 col-sm-12 text-center d-flex justify-content-end align-items-center">
+        <div>
+          <h1 class="fw-bolder">Wo'<span class="green">Pharma</span></h1>
+          <p class="hero">Your pharmacy for life. Your life counts a billion times to us.</p>
+          <p class="pb-4">Sign up for a Wo'<span class="green">Pharma</span> account today and get <span class="red">10%
+              discount</span> on every item purchased</p>
+          <a href="#" class="c-link">Sign up today</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<span class="my-cart-button p-2">
+  <a href="#" role="button" type="button" class="btn btn-dark button position-relative">
+    <i class="fa-solid fa-cart-arrow-down"></i>
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0
+      <span class="visually-hidden">unread messages</span>
+    </span>
+  </a>
+</span>
 {% endblock content %}

@@ -10,6 +10,42 @@ a {
   list-style-type: none;
 }
 
+/* scroll bar*/
+div.scrollmenu {
+  background-color: #F0FFFF;
+  overflow: auto;
+  white-space: nowrap;
+  border: transparent;
+  border-radius: 5%;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  color: #191970;
+}
+
+div.scrollmenu a:hover {
+  color: #000;
+  background-color: #e0ffff;
+  text-decoration: underline;
+}
+
+.scrollmenu {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollmenu::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari and Opera */
+}
+
+/*end of scroll menu*/
 .life-bg {
   background-color: #AFEEEE;
 }
@@ -42,10 +78,9 @@ a {
   background-color: #faebd7;
 }
 
-.img-left-border {
-  border-right: solid transparent;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
+.img-border {
+  border: solid transparent;
+  border-radius: 5%;
 }
 
 .light-green {
@@ -203,13 +238,87 @@ h6,
   z-index: 9999;
 }
 
+.stick-top {
+  position: sticky;
+  top: 10%;
+  bottom: inherit;
+  z-index: 9999;
+}
 .margin-top a {
   color: #191970;
   text-transform: capitalize;
   font-weight: bolder;
 }
 
+.top {
+  position: sticky;
+  top: 0.5%;
+  z-index: 9999;
+}
 .margin-top ul {
   list-style-type: none;
 }
+.special-link {
+  background-color: #ffd700;
+  border: transparent;
+  border-radius: 5%;
+}
 /*end*/
+/*map button*/
+.position-bottom {
+  position: sticky;
+  bottom: 0.3%;
+  top: auto;
+  z-index: 9999;
+}
+
+.button {
+  border: #000;
+  border-radius: 50%;
+}
+
+.my-cart-button {
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+  right: 4%;
+}
+
+/*scroll bar*/
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Add chevron shape to scrollbar thumb */
+::-webkit-scrollbar-thumb:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+/* Add arrow shape to scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover:before {
+  border-bottom: 2px solid #555;
+  border-right: 2px solid #555;
+}

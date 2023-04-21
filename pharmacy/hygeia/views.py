@@ -17,3 +17,6 @@ def details(request):
 
 def cart(request):
 	return render(request, 'hygeia/cart.html')
+
+def how_is_work(request):
+	return render(request, 'hygeia/how_is_works.html')
