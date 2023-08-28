@@ -32,6 +32,7 @@
   </div>
 </section>
 <!--end of specialist section-->
+
 <!--categories first section-->
 <section class="mt-4">
   <h1 class=" m-4 text-capitalize text-decoration-underline">Where to start</h1>
@@ -43,47 +44,28 @@
         <!--inner row for vitamins-->
         <div class="row">
           <!--shows only on smaller screens-->
+          {% for drug in drugs|slice:'1' %}
           <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
-              <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
             </div>
             <div>
-              <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
+              <small>{{drug.category.general_description|truncatechars:'50'}}</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
+          {% endfor %}
           <!--end of show on only small screens-->
+          {% for drug in drugs|slice:':4' %}
           <div class="col-md-6 d-none d-sm-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            <a href="{% url 'details' drug.pk %}" class="text-dark">
+              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
+              <p class="mb-1">{{drug.drug_name}}</p>
+              <p class="fw-bold mt-1">Ghs{{drug.price}}</p>
             </a>
             </a>
           </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-            </a>
-            </a>
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-            </a>
-            </a>
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins"
-                class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-            </a>
-          </div>
+          {% endfor %}
         </div>
         <div class="d-none d-md-block">
           <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
@@ -96,47 +78,28 @@
         <!--inner row for baby food-->
         <div class="row">
           <!--show on only small screens-->
+          {% for drug in drugs|slice:'1' %}
           <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
-              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
             </div>
             <div>
-              <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
+              <small>{{drug.category.general_description|truncatechars:'50'}}</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
+          {% endfor %}
           <!--end of show on only small screens-->
+          {% for drug in drugs|slice:':4' %}
           <div class="col-md-6 d-none d-sm-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            <a href="{% url 'details' drug.pk %}" class="text-dark">
+              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
+              <p class="mb-1">{{drug.drug_name}}</p>
+              <p class="fw-bold mt-1">Ghs{{drug.price}}</p>
             </a>
             </a>
           </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-            </a>
-            </a>
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-            </a>
-            </a>
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins"
-                class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-            </a>
-          </div>
+          {% endfor %}
         </div>
         <div class="d-none d-md-block">
           <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
@@ -174,46 +137,28 @@
         <!--inner row for vitamins-->
         <div class="row">
           <!--shows only on smaller screens-->
+          {% for drug in drugs|slice:'1' %}
           <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
-              <img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
+              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
             </div>
             <div>
-              <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
+              <small>{{drug.category.general_description|truncatechars:'50'}}</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
+          {% endfor %}
           <!--end of show on only small screens-->
+          {% for drug in drugs|slice:':6' %}
           <div class="col-md-6 d-none d-sm-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            <a href="{% url 'details' drug.pk %}" class="text-dark">
+              <img src="{{drug.image.url}}" alt="{{drung.drug_name}}" class="w-100 img-fluid">
+              <p class="mb-1">{{drug.drug_name}}</p>
+              <p class="fw-bolder mt-1">Ghs{{drug.price}}</p>
             </a>
             </a>
           </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-              </a>
-              </a>
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-              </a>
-              </a>
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-            </a>
-          </div>
+          {% endfor %}
         </div>
         <div class="d-none d-md-block">
           <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
@@ -226,46 +171,28 @@
         <!--inner row for baby food-->
         <div class="row">
           <!--show on only small screens-->
+          {% for drug in drugs|slice:'1' %}
           <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
-              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
             </div>
             <div>
-              <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
+              <small>{{drug.category.general_description}}</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
+          {% endfor %}
           <!--end of show on only small screens-->
+          {% for drug in drugs|slice:':6' %}
           <div class="col-md-6 d-none d-sm-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            <a href="{% url 'details' drug.pk %}" class="text-dark">
+              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
+              <p class="mb-1">{{drug.drug_name}}</p>
+              <p class="fw-bolder mt-1">Ghs{{drug.price}}</p>
             </a>
             </a>
           </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-              </a>
-              </a>
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-              </a>
-              </a>
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-            </a>
-          </div>
+          {% endfor %}
         </div>
         <div class="d-none d-md-block">
           <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
@@ -276,46 +203,28 @@
         <!--inner row for baby food-->
         <div class="row">
           <!--show on only small screens-->
+          {% for drug in drugs|slice:'1' %}
           <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
-              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
+              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
             </div>
             <div>
-              <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti.</small>
+              <small>{{drug.category.general_description|truncatechars:'50'}}</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
+          {% endfor %}
           <!--end of show on only small screens-->
+          {% for drug in drugs|slice:':4' %}
           <div class="col-md-6 d-none d-sm-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
+            <a href="{% url 'details' drug.pk %}" class="text-dark">
+              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
+              <p class="mb-1">{{drug.drug_name}}</p>
+              <p class="fw-bolder mt-1">Ghs{{drug.price}}</p>
             </a>
             </a>
           </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/baby.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-              </a>
-              </a>
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block d-lg-none border">
-            <a href="#" class="text-dark">
-              <img src="{% static 'hygeia/images/vits.jpg' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-              </a>
-              </a>
-          </div>
-          <div class="col-md-6 d-none d-sm-block d-md-block d-lg-none border">
-            <a href="#" class="text-dark"><img src="{% static 'hygeia/images/herbal.png' %}" alt="vitamins" class="w-100 img-fluid">
-              <p class="fw-bolder mb-1">Vitamin syrup</p>
-              <p class="fw-bolder mt-1">Price: Ghs20.0</p>
-            </a>
-          </div>
+          {% endfor %}
         </div>
         <div class="d-none d-md-block">
           <a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> See all</a>
@@ -332,366 +241,26 @@
 <hr>
 <section class="container-fluid overflow-hidden">
   <div class="row d-flex justify-content-center">
+    {% for drug in drugs %}
     <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
+      <a href="{% url 'details' drug.pk %}">
         <figure class="figure">
           <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
+            <small class="card-title"><span class="red">{{drug.category}}</span> <span></small>
+            <small class="fw-bolder price">Ghs {{drug.price}}</small>
           </div>
           <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
+            <img src="{{drug.image.url}}" class="figure-img img-fluid rounded"
+              alt="{{drug.drug_name}}">
           </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
         </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
+        <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
+            <!--<small>{{drug.category.general_description|truncatechars:'30'}}</small>-->
+            <p class="fw-bolder text-dark mt-1 mb-1 pb-1">{{drug.drug_name}}</p>
           </figcaption>
-        </figure>
       </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
     </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
-    <div class="col-md-3 col-lg-2 col-sm-2 p-3 m-1 border-curated bg-light shadow" data-aos="fade-up">
-      <a href="#">
-        <figure class="figure">
-          <div class="d-flex justify-content-between">
-            <small class="card-title"><span class="red">Men's Health</span> <span></small>
-            <small class="fw-bolder price">Ghs 20.00</small>
-          </div>
-          <div class="text-center">
-            <img src="{% static 'hygeia/images/product3.png' %}" class="figure-img img-fluid rounded"
-              alt="first product">
-          </div>
-          <figcaption class="figure-caption pt-0 mt-0 text-capitalize">
-            <strong>
-              <p>Ibuprofen 200mg. very good for treating headache, fever, rheumatism</p>
-            </strong>
-          </figcaption>
-        </figure>
-      </a>
-      <div class="d-flex justify-content-between border-top buts">
-        <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-        <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
-    </div>
+    {% endfor %}
   </div>
   <div class="text-center mt-3">
     <a href="#" class="green all-link p-2">View all Products <i class="fa-solid fa-chevron-right"></i></a>

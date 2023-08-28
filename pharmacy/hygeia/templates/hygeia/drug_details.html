@@ -1,0 +1,29 @@
+{% extends 'hygeia/base.html' %}
+{% load static %}
+{% block title %}Wopharma | {{object.category.pharmacy}} {% endblock title %}
+
+{% block content %}
+<section class="bg-light mx-2 mt-5">
+    <div class="container">
+        <div class="row g-2">
+            <h1 class="text-decoration-underline text-center text-dark pb-3 text-capitalize">{{object.drug_name}}</h1>
+            <div class="col col-md-5">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                        <h4 class="text-decoration-underline pb-3 text-uppercase">Drug info.</h4>
+                        <small class="d-block"><span class="fw-bolder">Description:</span> {{object.description}}</small>
+                        <small class="d-block"><span class="fw-bolder">Side Effects:</span> {{object.side_effect}}</small>
+                        <small class="fw-bolder">GHS {{object.price}}</small>
+                        <div class="text-center pt-3">
+                            <button class="btn btn-md btn-primary">Buy now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-5 pt-3 pb-3">
+                <img src="{{object.image.url}}" class="img-fluid float-end rounded">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
