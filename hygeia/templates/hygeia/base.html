@@ -1,0 +1,129 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="{% static 'hygeia/images/wopharma.png' %}">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!--google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'hygeia/css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'hygeia/css/animate.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'hygeia/css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'hygeia/css/index.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'hygeia/css/style (2).css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'hygeia/css/styles.css' %}">
+  <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+<div class="scrollmenu">
+  <a href="#home">
+    <p class="mb-1 mt-1"><i class="fa-solid fa-house-medical"></i></p> Home Care
+  </a>
+  <a href="#news">
+    <p class="mb-1 mt-1"><i class="fa-solid fa-leaf"></i></p> Herbal Medicine
+  </a>
+  <a href="#contact">
+    <p class="mb-1 mt-1"><i class="fa-solid fa-user-nurse"></i></p> Sundries
+  </a>
+  <a href="#about">
+    <p class="mb-1 mt-1"><i class="fa-solid fa-person-dress"></i></p> Cosmetics
+  </a>
+  <a href="#home">
+    <p class="mb-1 mt-1"><i class="fa-solid fa-carrot"></i></p> Vitamins
+  </a>
+  <a href="#news">
+    <p class="mb-1 mt-1"><i class="fa-solid fa-utensils"></i></p> Snacks & Confectioneries
+  </a>
+  <a href="#about">
+    <p class="mb-1 mt-1"><i class="fa-solid fa-baby"></i></p> Baby Food
+  </a>
+  <a href="#sex">
+    <p class="mb-1 mt-1"><i class="fa-solid fa-prescription-bottle-medical"></i></p> Sex & Enhancement
+  </a>
+  <a href="#news">
+    <p class="mb-1 mt-1"><i class="fa-solid fa-prescription-bottle-medical"></i></p> Pharmacies
+  </a>
+  <a href="#contact">
+    <p class="mb-1 mt-1"><i class="fa-solid fa-user-doctor"></i></p> Book Consultation
+  </a>
+  <a href="#about">
+    <p class="mb-1 mt-1"><i class="fa-solid fa-pills"></i></p> Upload Prescription
+  </a>
+</div>
+
+ {% block content %}
+{% endblock content %}
+ <footer class="pt-5">
+   <div class="container-fluid bg-dark mt-5 mb-3 text-light p-5">
+     <div class="row">
+      <div class="col-md-4 pt-3 pb-3">
+        <h6 class="text-uppercase text-decoration-underline fw-bolder footer">Wo' <span class="green">Pharma</span></h6>
+        <u class="text-decoration-none px-4">
+          <li><a href="#" title="about us" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#" title="contact us" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> Contact</a></li>
+          <li><a href="#" title="our services" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> Services</a></li>
+          <li><a href="#" title="our mission" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> Our Mission</a></li>
+          <li><a href="#" title="how we work" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> How it Works</a></li>
+        </u>
+      </div>
+      <div class="col-md-4 pt-3 pb-3">
+        <h6 class="text-uppercase text-decoration-underline fw-bolder text-light footer">Products &amp; Services</h6>
+        <u class="text-decoration-none px-4">
+          <li><a href="#" title="book a consultation" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> Consultation</a></li>
+          <li><a href="#" title="deliveries available" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> Delivery Service</a></li>
+          <li><a href="#" title="drugs and medicine" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> Drugs & Medicines</a></li>
+          <li><a href="#" title="how we handle your data" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> Data Handling</a></li>
+        </u>
+      </div>
+      <div class="col-md-4 pt-3 pb-3">
+        <h6 class="text-uppercase text-decoration-underline fw-bolder text-light footer">Customer Support</h6>
+        <u class="text-decoration-none px-4">
+          <li><a href="#" title="contact us" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> Contact</a></li>
+          <li><a href="#" title="frequently ask questions" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> FAQs</a></li>
+          <li><a href="#" title="lodge your complaints" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> Complaints</a></li>
+          <li><a href="#" title="your prescriptions" class="text-light"><i
+              class="fa-solid fa-chevron-right"></i> prescriptions</a></li>
+        </u>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="position-bottom">
+  <div class="text-center border-top bg-light">
+    <button class=" btn btn-dark btn-lg mt-3 fw-bolder button"><i class="fa-solid fa-book-atlas"></i></button>
+  </div>
+</div>
+<div class="d-flex justify-content-center">
+ <a href="#"><small class="text-muted font-monospace text-uppercase text-decoration-underline">powered by atlas</small></a>
+</div>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="{% static 'hygeia/js/wow/wow.js' %}"></script>
+<script src="{% static 'hygeia/js/aos/aos.js' %}"></script>
+<script src="{% static 'hygeia/js/jquery/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'hygeia/js/javascript/style.js' %}"></script>
+<script type="text/javascript" src="{% static 'hygeia/js/jquery/script.js' %}"></script>
+</body>
+</html>

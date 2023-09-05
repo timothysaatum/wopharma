@@ -1,0 +1,50 @@
+{% extends 'hygeia/base.html' %}
+{% load static %}
+{% block title %}Store | Wo'pharma{% endblock title %}
+
+{% block content %}
+
+<section class="mt-5 p-4">
+    <div class="container">
+        <h1 class="text-center text-decoration-underline pb-4 mb-3 fw-lighter font-monospace text-uppercase"
+            data-aos="fade-up" data-aos-anchor-placement="top-bottom"><span class="red">!</span>Important. How it works
+        </h1>
+        <div class="row d-flex justify-content-between">
+            <div class="col-md-4 col-sm-12 border-end border-start" data-aos="fade-down">
+                <span class="p-4"><i class="fa-solid fa-cart-plus fa-2x light-green text-success p-3"></i></span>
+                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delivery System">
+                    <h3 class="green text-decoration-underline">1. Fast Delivery</h3>
+                </a>
+                <p class="hero">When you make an order through our site. We map you to a delivery &amp; a pharmacy that
+                    is close
+                    to you so that your drugs can get to you as soon as possible at the comfort of your location.</p>
+                <a href="#" class="text-success stext-muted text-uppercase" title="flow chart">Read more <span><i
+                            class="fa-solid fa-chevron-right"></i></span></a>
+            </div>
+            <div class="col-md-4 col-sm-12 border-end" data-aos="fade-right">
+                <span class="p-4"><i class="fa-solid fa-truck-fast fa-2x light-green text-success p-3"></i></span>
+                <a href="#" title="clinicians">
+                    <h3 class="green text-decoration-underline">2. New Medicines Everyday</h3>
+                </a>
+                <p class="hero">We work with so many reliable pharmaceutical companies &amp; shops with thousand sign
+                    ups a day
+                    who provide us with constant supply of
+                    drugs so we never run out of supplies.</p>
+                <a href="#" class="text-success stext-muted text-uppercase" title="Pharmacies">Read more <span><i
+                            class="fa-solid fa-chevron-right"></i></span></a>
+            </div>
+            <div class="col-md-4 col-sm-12 border-end" data-aos="fade-left">
+                <span class="p-4"><i class="fa-solid fa-shield-halved fa-2x light-green text-success p-3"></i></span>
+                <a href="#" title="clinicians">
+                    <h3 class="green text-decoration-underline">3. Quality Guranteed</h3>
+                </a>
+                <p class="hero">You can book a consultation with any clinician of your choice. The prescriptions will be
+                    relayed
+                    to the nearest pharmacy and delivery for easy pick up.</p>
+                <a href="#" class="text-success stext-muted text-uppercase" title="clinicians">Read more <span><i
+                            class="fa-solid fa-chevron-right"></i></span></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
