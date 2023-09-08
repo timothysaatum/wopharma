@@ -26,6 +26,4 @@ def cart(request):
 
 def how_is_work(request):
 	return render(request, 'hygeia/how_is_works.html')
-
-def logins(request):
-	return render(request, 'hygeia/login.html')	
+	

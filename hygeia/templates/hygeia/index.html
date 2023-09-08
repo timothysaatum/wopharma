@@ -2,7 +2,16 @@
 {% load static %}
 {% block title %}Home | Wo'pharma{% endblock title %}
 
+
+
 {% block content %}
+
+<!--login and signup include files-->
+{% include "./includes/login.html" %}
+
+{% include "./includes/signup.html" %}
+<!--End login and signup include files-->
+
 <section class="mx-2 d-flex justify-content-between top bg-light scroll-bg shadow p-2">
   <div class="icon-logo">
     <a href="#" class="profile"><img src="{% static 'hygeia/images/wopharma.png'%}"
@@ -32,7 +41,6 @@
   </div>
 </section>
 <!--end of specialist section-->
-
 <!--categories first section-->
 <section class="mt-4">
   <h1 class=" m-4 text-capitalize text-decoration-underline">Where to start</h1>
@@ -108,11 +116,16 @@
       <div class="col-md-5 m-1 bg-light shadow text-center p-3" data-aos="fade-up">
         <h1 class="h6 fw-bolder mt-2 text-warning">Join today and get 10% discount</h1>
         <p>It is free and easy</p>
-        <a href="#" class="green special-link p-2">Create account</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mySignupModal">
+          sign up
+        </button>
         <p class="pt-3 d-none d-sm-block">Get the feelings of what it means to be part of this family.</p>
-        <div class="dropdownn-content">
-          <a href="#" data-toggle="modal" data-target="#Modal_login" class="text-muted text-decoration-underline">Sign in</a>
-        </div>
+        <!--<div class="dropdownn-content">
+          <a href="login.html" data-toggle="modal" data-target="#myModal" class="text-muted text-decoration-underline">Sign in</a>
+        </div>-->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myLoginModal">
+          sign in
+        </button>
         <div class="d-flex align-items-center mt-3">
           <div>
             <p>
@@ -457,4 +470,6 @@
     </span>
   </a>
 </span>
+
+
 {% endblock content %}
