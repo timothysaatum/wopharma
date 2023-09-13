@@ -10,7 +10,10 @@
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
-
+.navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+      }
   </style>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -31,46 +34,69 @@
   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler btn btn-outline-success" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fa-solid fa-house-medical"></i></p> Home Care <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-leaf"></i></p> Herbal Medicine</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-user-nurse"></i></p> Sundries</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-person-dress"></i></p> Cosmetics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-carrot"></i></p> Vitamins</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-utensils"></i></p> Snacks & Confectioneries</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-baby"></i></p> Baby Food</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-prescription-bottle-medical"></i></p> Sex & Enhancement</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-prescription-bottle-medical"></i></p> Pharmacies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-user-doctor"></i></p> Book Consultation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-pills"></i></p> Upload Prescription</a>
+        </li>
+        <!--<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>-->
+        </li>
+      </ul>
+    </div>
+  </nav> 
 
-
-<div class="scrollmenu">
-  <a href="#home">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-house-medical"></i></p> Home Care
-  </a>
-  <a href="#news">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-leaf"></i></p> Herbal Medicine
-  </a>
-  <a href="#contact">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-user-nurse"></i></p> Sundries
-  </a>
-  <a href="#about">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-person-dress"></i></p> Cosmetics
-  </a>
-  <a href="#home">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-carrot"></i></p> Vitamins
-  </a>
-  <a href="#news">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-utensils"></i></p> Snacks & Confectioneries
-  </a>
-  <a href="#about">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-baby"></i></p> Baby Food
-  </a>
-  <a href="#sex">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-prescription-bottle-medical"></i></p> Sex & Enhancement
-  </a>
-  <a href="#news">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-prescription-bottle-medical"></i></p> Pharmacies
-  </a>
-  <a href="#contact">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-user-doctor"></i></p> Book Consultation
-  </a>
-  <a href="#about">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-pills"></i></p> Upload Prescription
-  </a>
-</div>
 
 {% block content %}
 {% endblock content %}
@@ -129,6 +155,7 @@
 <div class="d-flex justify-content-center">
  <a href="#"><small class="text-muted font-monospace text-uppercase text-decoration-underline">powered by atlas</small></a>
 </div>
+
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/owl.carousel/dist/owl.carousel.min.js"></script>
@@ -136,6 +163,7 @@
 <script src="{% static 'hygeia/js/aos/aos.js' %}"></script>
 <script src="{% static 'hygeia/js/jquery/jquery.js' %}"></script>
 <script type="text/javascript" src="{% static 'hygeia/js/javascript/style.js' %}"></script>
+<script type="text/javascript" src="{% static 'hygeia/js/javascript/cart.js' %}"></script>
 <script type="text/javascript" src="{% static 'hygeia/js/jquery/script.js' %}"></script>
 </body>
 </html>

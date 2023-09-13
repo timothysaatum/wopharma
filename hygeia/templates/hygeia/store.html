@@ -418,9 +418,13 @@
             <div class="d-flex justify-content-between border-top buts">
                 <button class="btn btn-sm-outline"><i class="fa-regular fa-thumbs-up"></i></button>
                 <button class="btn btn-sm-outline"><i class="fa-solid fa-share-nodes"></i></button>
-                <button class="btn btn-sm-outline"><i class="fa-solid fa-cart-plus"></i></button>
+                <button class="btn btn-sm-outline" onclick="cartCount()"><i class="fa-solid fa-cart-plus"></i></button>
+                <button class="btn btn-sm-outline" onclick="decrease()">-</button>           
             </div>
         </div>
     </div>
 </section>
+
+{% include './includes/cart.html' %}
+
 {% endblock content %}
