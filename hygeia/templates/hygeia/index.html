@@ -12,32 +12,9 @@
 {% include "./includes/signup.html" %}
 <!--End login and signup include files-->
 
-<section class="mx-2 d-flex justify-content-between top bg-light scroll-bg shadow p-2">
-  <div class="icon-logo">
-    <a href="#" class="profile"><img src="{% static 'hygeia/images/wopharma.png'%}"
-        class="rounded-circle image-fluid border spec-consultation" alt="pharmacy logo">
-      <small class="fw-bolder font-size">@wopharma</small>
-    </a>
-  </div>
-  <div class="d-flex align-items-center">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search item" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
-  </div>
-  <div class="d-flex align-items-center px-2">
-  </div>
-</section>
-<!--end of top bar-->
-<!--booking specialist section-->
-<section class="mt-2 mb-2 d-flex justify-content-center stick-top">
-  <div class="d-flex justify-content-between scroll-bg">
-    <small class="p-3 fw-bolder spec-consultation">Not sure of what to buy?</small>
-    <span><i class="fa-solid fa-arrow-right p-3 green"></i></span>
-    <a href="#" class="p-3 fw-bolder spec-consultation"> Talk to a specialist</a>
-  </div>
-</section>
-<!--end of specialist section-->
+<!--Sticky_header-->
+{% include "./includes/sticky_header.html" %}
+
 <!--categories first section-->
 <section class="mt-4">
   <h1 class=" m-4 text-capitalize text-decoration-underline">Where to start</h1>

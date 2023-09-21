@@ -26,4 +26,7 @@ def cart(request):
 
 def how_is_work(request):
 	return render(request, 'hygeia/how_is_works.html')
+
+def upload_prescription(request):
+	return render(request, 'hygeia/upload_prescription.html')	
 	
