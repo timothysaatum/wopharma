@@ -22,41 +22,48 @@
 </head>
 <body>
 <div class="scrollmenu">
-  <a href="#home">
-    <p class="mb-1 mt-1"><i class="fa-solid fa-house-medical"></i></p> Home Care
-  </a>
-  <a href="#news">
+  <a href="#herbal">
     <p class="mb-1 mt-1"><i class="fa-solid fa-leaf"></i></p> Herbal Medicine
   </a>
   <a href="#contact">
     <p class="mb-1 mt-1"><i class="fa-solid fa-user-nurse"></i></p> Sundries
   </a>
-  <a href="#about">
+  <a href="#cosmetics">
     <p class="mb-1 mt-1"><i class="fa-solid fa-person-dress"></i></p> Cosmetics
   </a>
-  <a href="#home">
+  <a href="#vitamins">
     <p class="mb-1 mt-1"><i class="fa-solid fa-carrot"></i></p> Vitamins
   </a>
-  <a href="#news">
+  <a href="#snacks">
     <p class="mb-1 mt-1"><i class="fa-solid fa-utensils"></i></p> Snacks & Confectioneries
   </a>
-  <a href="#about">
+  <a href="#baby">
     <p class="mb-1 mt-1"><i class="fa-solid fa-baby"></i></p> Baby Food
   </a>
   <a href="#sex">
     <p class="mb-1 mt-1"><i class="fa-solid fa-prescription-bottle-medical"></i></p> Sex & Enhancement
   </a>
-  <a href="#news">
+  <a href="#pharmacies">
     <p class="mb-1 mt-1"><i class="fa-solid fa-prescription-bottle-medical"></i></p> Pharmacies
   </a>
-  <a href="#contact">
+  <a href="#consultation">
     <p class="mb-1 mt-1"><i class="fa-solid fa-user-doctor"></i></p> Book Consultation
   </a>
-  <a href="#about">
+  <a href="#prescription">
     <p class="mb-1 mt-1"><i class="fa-solid fa-pills"></i></p> Upload Prescription
   </a>
 </div>
-
+  {% if messages %} {% for message in messages %}
+    <div class="row d-flex justify-content-center mt-5 pt-4">
+      <div class="col-10">
+        {% if message.tags == 'error' %}
+        <div class="alert alert-danger">{{message}}</div>
+        {% else %}
+        <div class="alert alert-{{message.tags}}">{{message}}</div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %} {% endif %}
  {% block content %}
 {% endblock content %}
  <footer class="pt-5">

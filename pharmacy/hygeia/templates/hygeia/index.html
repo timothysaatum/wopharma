@@ -45,6 +45,7 @@
         <div class="row">
           <!--shows only on smaller screens-->
           {% for drug in drugs|slice:'1' %}
+          {% if drug.tag == 'vitamins & supplements' %}
           <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
               <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
@@ -54,9 +55,13 @@
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
+          {% else %}
+          <p>No Vitamins and Supplement available</p>
+          {% endif %}
           {% endfor %}
           <!--end of show on only small screens-->
           {% for drug in drugs|slice:':4' %}
+          {% if drug.tag == 'vitamins & supplements' %}
           <div class="col-md-6 d-none d-sm-block border">
             <a href="{% url 'details' drug.pk %}" class="text-dark">
               <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
@@ -65,6 +70,9 @@
             </a>
             </a>
           </div>
+          {% else %}
+            <p>No Vitamins and Supplement available</p>
+          {% endif %}
           {% endfor %}
         </div>
         <div class="d-none d-md-block">
@@ -108,9 +116,9 @@
       <div class="col-md-5 m-1 bg-light shadow text-center p-3" data-aos="fade-up">
         <h1 class="h6 fw-bolder mt-2 text-warning">Join today and get 10% discount</h1>
         <p>It is free and easy</p>
-        <a href="#" class="green special-link p-2">Create account</a>
+        <a href="{% url 'register' %}" class="green special-link p-2">Create account</a>
         <p class="pt-3 d-none d-sm-block">Get the feelings of what it means to be part of this family.</p>
-        <a href="#" class="text-muted text-decoration-underline">sign in</a>
+        <a href="{% url 'login' %}" class="text-muted text-decoration-underline">sign in</a>
         <div class="d-flex align-items-center mt-3">
           <div>
             <p>
@@ -441,7 +449,7 @@
           <p class="hero">Your pharmacy for life. Your life counts a billion times to us.</p>
           <p class="pb-4">Sign up for a Wo'<span class="green">Pharma</span> account today and get <span class="red">10%
               discount</span> on every item purchased</p>
-          <a href="#" class="c-link">Sign up today</a>
+          <a href="{% url 'register' %}" class="c-link">Sign up today</a>
         </div>
       </div>
     </div>

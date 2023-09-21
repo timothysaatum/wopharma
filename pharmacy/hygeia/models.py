@@ -1,12 +1,25 @@
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.urls import reverse
 
+
+
+
+user = get_user_model()
+
+class Tag(models.Model):
+	tag = models.CharField(max_length=200)
+
+
+	def __str__(self):
+		return self.tag
+
+
 class Pharmacy(models.Model):
-	owner = models.ForeignKey(User, on_delete=models.CASCADE)
+	owner = models.ForeignKey(user, on_delete=models.CASCADE)
 	pharmacy_name = models.CharField(max_length=200)
-	logo = models.ImageField(upload_to='wopharm/pharmacy/logo', null=True, blank=True)
+	logo = models.ImageField(upload_to='wopharm/pharmacies/logos', null=True, blank=True)
 	digital_address = models.CharField(max_length=300)
 	registration_code = models.CharField(max_length=100)
 	region = models.CharField(max_length=50)
@@ -18,6 +31,10 @@ class Pharmacy(models.Model):
 
 	def __str__(self):
 		return self.pharmacy_name
+
+
+	def get_absolute_url(self):
+		return reverse('pharmacy-details', kwargs={'pk':self.pk})
 
 
 
@@ -34,10 +51,14 @@ class DrugCategory(models.Model):
 	def __str__(self):
 		return self.drug_class
 
+	def get_absolute_url(self):
+		return reverse('category-details', kwargs={'pk':self.pk})
+
 
 
 class Drug(models.Model):
 	category = models.ForeignKey(DrugCategory, on_delete=models.CASCADE)
+	tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
 	drug_name = models.CharField(max_length=100)
 	price = models.DecimalField(max_digits=65, decimal_places=2)
 	discount_percentage = models.DecimalField(max_digits=65, decimal_places=2, null=True, blank=True)
@@ -45,7 +66,10 @@ class Drug(models.Model):
 	image = models.ImageField(upload_to='wopharm/drugs/images')
 	quantity_in_stock = models.PositiveIntegerField()
 	description = models.CharField(max_length=200)
+	use_cases = models.TextField(verbose_name='what does the drug treat')
+	exceptions = models.TextField(verbose_name='When not to use drug')
 	side_effect = models.TextField()
+	dose_recommendation = models.TextField()
 	apply_discount = models.BooleanField(default=False)
 	is_in_stock = models.BooleanField(default=False)
 	publish = models.BooleanField(default=False)

@@ -1,0 +1,17 @@
+{% extends 'hygeia/base.html' %}
+{% load static %}
+{% block title %} Add Drug Category {% endblock title %}
+
+{% block content %}
+<section class="bg-light mx-2 mt-5">
+    <div class="container">
+        <div class="row g-2">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>{{form.as_p}}</p>
+                <button type="submit" class="btn btn-outline-success btn-md">Save</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'hygeia/base.html' %}
+
+
+{% block title %}{{pharmacy.pharmacy_name}}{% endblock %}
+{% block content %}
+<section class="user pb-5">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12 col-md-12 col-lg-10 bg-light" id="update">
+                <p class="lead text-center p-3 text-dark fw-bold">
+                   <img src="{{object.logo.url}}" alt="{{object.pharmacy_name}}" width="100px" class="rounded-circle"> {{pharmacy.pharmacy_name}}
+                </p>
+                <p>{{object.digital_address}}</p>
+                <p>{{object.registration_code}}</p>
+                <p>{{object.region}}</p>
+            </div>
+            <<a href="{% url 'update-pharmacy-info' object.pk %}" title="{{object.pharmacy_name}}">Use this for now</a>
+            <small><button class="btn btn-outline-secondary" id="add-info">Update details</button></small>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -22,7 +22,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('hygeia.urls')),
-    path('patient/', include('patient.urls'))
+    path('patient/', include('patient.urls')),
+    path('users/', include('user.urls'))
 ]
 
 
