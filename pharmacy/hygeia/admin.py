@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Pharmacy, DrugCategory, Drug, Precriptions, Tag
+from .models import Pharmacy, DrugCategory, Drug, Prescriptions, Tag
 
 
 
@@ -16,7 +16,7 @@ class DrugAdmin(admin.ModelAdmin):
         'apply_discount', 'is_in_stock', 'publish')
 
 
-class PrecriptionsAdmin(admin.ModelAdmin):
+class PrescriptionsAdmin(admin.ModelAdmin):
     list_display = ('pharmacy', 'drug', 'created_on', 'prescribed_by', 'precribed_to', 'precribed_for', 'dosage', 'relevant_advice')
 
 
@@ -27,5 +27,5 @@ class TagAdmin(admin.ModelAdmin):
 admin.site.register(Pharmacy, PharmacyAdmin)
 admin.site.register(DrugCategory, DrugCategoryAdmin)
 admin.site.register(Drug, DrugAdmin)
-admin.site.register(Precriptions, PrecriptionsAdmin)
+admin.site.register(Prescriptions, PrescriptionsAdmin)
 admin.site.register(Tag, TagAdmin)

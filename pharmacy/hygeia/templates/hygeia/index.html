@@ -44,35 +44,27 @@
         <!--inner row for vitamins-->
         <div class="row">
           <!--shows only on smaller screens-->
-          {% for drug in drugs|slice:'1' %}
-          {% if drug.tag == 'vitamins & supplements' %}
+          {% for vitamin in vitamins|slice:'1' %}
           <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
-              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
+              <img src="{{vitamin.image.url}}" alt="{{vitamin.drug_name}}" class="w-100 img-fluid">
             </div>
             <div>
               <small>{{drug.category.general_description|truncatechars:'50'}}</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
-          {% else %}
-          <p>No Vitamins and Supplement available</p>
-          {% endif %}
           {% endfor %}
           <!--end of show on only small screens-->
-          {% for drug in drugs|slice:':4' %}
-          {% if drug.tag == 'vitamins & supplements' %}
+          {% for vitamin in vitamins|slice:':4' %}
           <div class="col-md-6 d-none d-sm-block border">
-            <a href="{% url 'details' drug.pk %}" class="text-dark">
-              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
-              <p class="mb-1">{{drug.drug_name}}</p>
-              <p class="fw-bold mt-1">Ghs{{drug.price}}</p>
+            <a href="{% url 'details' vitamin.pk %}" class="text-dark">
+              <img src="{{vitamin.image.url}}" alt="{{vitamin.drug_name}}" class="w-100 img-fluid">
+              <p class="mb-1">{{vitamin.drug_name}}</p>
+              <p class="fw-bold mt-1">Ghs{{vitamin.price}}</p>
             </a>
             </a>
           </div>
-          {% else %}
-            <p>No Vitamins and Supplement available</p>
-          {% endif %}
           {% endfor %}
         </div>
         <div class="d-none d-md-block">
@@ -86,24 +78,24 @@
         <!--inner row for baby food-->
         <div class="row">
           <!--show on only small screens-->
-          {% for drug in drugs|slice:'1' %}
+          {% for food in baby_food|slice:'1' %}
           <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
-              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
+              <img src="{{baby_food.image.url}}" alt="{{baby_food.drug_name}}" class="w-100 img-fluid">
             </div>
             <div>
-              <small>{{drug.category.general_description|truncatechars:'50'}}</small>
+              <small>{{baby_food.category.general_description|truncatechars:'50'}}</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
           {% endfor %}
           <!--end of show on only small screens-->
-          {% for drug in drugs|slice:':4' %}
+          {% for baby_food in baby_food|slice:':4' %}
           <div class="col-md-6 d-none d-sm-block border">
-            <a href="{% url 'details' drug.pk %}" class="text-dark">
-              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
-              <p class="mb-1">{{drug.drug_name}}</p>
-              <p class="fw-bold mt-1">Ghs{{drug.price}}</p>
+            <a href="{% url 'details' baby_food.pk %}" class="text-dark">
+              <img src="{{baby_food.image.url}}" alt="{{baby_food.drug_name}}" class="w-100 img-fluid">
+              <p class="mb-1">{{baby_food.drug_name}}</p>
+              <p class="fw-bold mt-1">Ghs{{baby_food.price}}</p>
             </a>
             </a>
           </div>
@@ -145,24 +137,24 @@
         <!--inner row for vitamins-->
         <div class="row">
           <!--shows only on smaller screens-->
-          {% for drug in drugs|slice:'1' %}
+          {% for sex_drug in sex_drugs|slice:'1' %}
           <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
-              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
+              <img src="{{sex_drug.image.url}}" alt="{{sex_drug.drug_name}}" class="w-100 img-fluid">
             </div>
             <div>
-              <small>{{drug.category.general_description|truncatechars:'50'}}</small>
+              <small>{{sex_drug.category.general_description|truncatechars:'50'}}</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
           {% endfor %}
           <!--end of show on only small screens-->
-          {% for drug in drugs|slice:':6' %}
+          {% for sex_drug in sex_drugs|slice:':6' %}
           <div class="col-md-6 d-none d-sm-block border">
-            <a href="{% url 'details' drug.pk %}" class="text-dark">
-              <img src="{{drug.image.url}}" alt="{{drung.drug_name}}" class="w-100 img-fluid">
-              <p class="mb-1">{{drug.drug_name}}</p>
-              <p class="fw-bolder mt-1">Ghs{{drug.price}}</p>
+            <a href="{% url 'details' sex_drug.pk %}" class="text-dark">
+              <img src="{{sex_drug.image.url}}" alt="{{sex_drug.drug_name}}" class="w-100 img-fluid">
+              <p class="mb-1">{{sex_drug.drug_name}}</p>
+              <p class="fw-bolder mt-1">Ghs{{sex_drug.price}}</p>
             </a>
             </a>
           </div>
@@ -179,24 +171,24 @@
         <!--inner row for baby food-->
         <div class="row">
           <!--show on only small screens-->
-          {% for drug in drugs|slice:'1' %}
+          {% for cosmetic in cosmetics|slice:'1' %}
           <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
-              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
+              <img src="{{cosmetic.image.url}}" alt="{{cosmetic.drug_name}}" class="w-100 img-fluid">
             </div>
             <div>
-              <small>{{drug.category.general_description}}</small>
+              <small>{{cosmetic.category.general_description}}</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
           {% endfor %}
           <!--end of show on only small screens-->
-          {% for drug in drugs|slice:':6' %}
+          {% for cosmetic in cosmetics|slice:':6' %}
           <div class="col-md-6 d-none d-sm-block border">
-            <a href="{% url 'details' drug.pk %}" class="text-dark">
-              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
-              <p class="mb-1">{{drug.drug_name}}</p>
-              <p class="fw-bolder mt-1">Ghs{{drug.price}}</p>
+            <a href="{% url 'details' cosmetic.pk %}" class="text-dark">
+              <img src="{{cosmetic.image.url}}" alt="{{cosmetic.drug_name}}" class="w-100 img-fluid">
+              <p class="mb-1">{{cosmetic.drug_name}}</p>
+              <p class="fw-bolder mt-1">Ghs{{cosmetic.price}}</p>
             </a>
             </a>
           </div>
@@ -211,24 +203,24 @@
         <!--inner row for baby food-->
         <div class="row">
           <!--show on only small screens-->
-          {% for drug in drugs|slice:'1' %}
+          {% for item in home_care|slice:'1' %}
           <div class="col-md-6 col-sm-3 d-flex justify-content-between d-block d-md-none">
             <div class="border m-1">
-              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
+              <img src="{{item.image.url}}" alt="{{item.drug_name}}" class="w-100 img-fluid">
             </div>
             <div>
-              <small>{{drug.category.general_description|truncatechars:'50'}}</small>
+              <small>{{item.category.general_description|truncatechars:'50'}}</small>
               <p class="text-center"><a href="#" class="green"><i class="fa-solid fa-chevron-right"></i> see all</a></p>
             </div>
           </div>
           {% endfor %}
           <!--end of show on only small screens-->
-          {% for drug in drugs|slice:':4' %}
+          {% for item in home_care|slice:':4' %}
           <div class="col-md-6 d-none d-sm-block border">
-            <a href="{% url 'details' drug.pk %}" class="text-dark">
-              <img src="{{drug.image.url}}" alt="{{drug.drug_name}}" class="w-100 img-fluid">
-              <p class="mb-1">{{drug.drug_name}}</p>
-              <p class="fw-bolder mt-1">Ghs{{drug.price}}</p>
+            <a href="{% url 'details' item.pk %}" class="text-dark">
+              <img src="{{item.image.url}}" alt="{{item.drug_name}}" class="w-100 img-fluid">
+              <p class="mb-1">{{item.drug_name}}</p>
+              <p class="fw-bolder mt-1">Ghs{{item.price}}</p>
             </a>
             </a>
           </div>

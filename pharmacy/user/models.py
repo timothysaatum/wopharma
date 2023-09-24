@@ -28,9 +28,8 @@ class User(AbstractBaseUser):
 	REQUIRED_FIELDS = 	['telephone']
 
 	objects = CustomManager()
-#4445 6940 0253 8283
-#485
-#11/24
+
+
 
 	def __str__(self):
 		return f'{self.first_name} {self.last_name}'

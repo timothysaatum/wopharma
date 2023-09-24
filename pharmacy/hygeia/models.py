@@ -5,9 +5,7 @@ from django.urls import reverse
 
 
 
-
 user = get_user_model()
-
 class Tag(models.Model):
 	tag = models.CharField(max_length=200)
 
@@ -37,8 +35,6 @@ class Pharmacy(models.Model):
 		return reverse('pharmacy-details', kwargs={'pk':self.pk})
 
 
-
-
 class DrugCategory(models.Model):
 	pharmacy = models.ForeignKey(Pharmacy, on_delete=models.CASCADE)
 	drug_class = models.CharField(max_length=100)
@@ -53,7 +49,6 @@ class DrugCategory(models.Model):
 
 	def get_absolute_url(self):
 		return reverse('category-details', kwargs={'pk':self.pk})
-
 
 
 class Drug(models.Model):
@@ -91,8 +86,7 @@ class Drug(models.Model):
 		return reverse('drug-details', kwargs={'pk':self.pk})
 
 
-
-class Precriptions(models.Model):
+class Prescriptions(models.Model):
 	pharmacy = models.ForeignKey(Pharmacy, on_delete=models.CASCADE)
 	drug = models.ForeignKey(Drug, on_delete=models.CASCADE)
 	created_on = models.DateField()

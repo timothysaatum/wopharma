@@ -4,7 +4,7 @@ from .models import Drug, Pharmacy, DrugCategory
 from django.views.generic import (TemplateView, ListView, CreateView, DeleteView, UpdateView, DetailView)
 from .forms import PharmacyCreationForm
 from django.urls import reverse_lazy
-#from django.contrib import messages
+from django.contrib import messages
 
 
 
@@ -22,8 +22,7 @@ class HomeView(ListView):
 		context['baby_food'] = Drug.objects.filter(tag__tag='baby food')
 		context['sex_drugs'] = Drug.objects.filter(tag__tag='sex enhancers')
 		context['cosmetics'] = Drug.objects.filter(tag__tag='cosmetics')
-
-		print(context)
+		context['home_care'] = Drug.objects.filter(tag__tag__icontains='home care')
 
 		return context
 
@@ -121,3 +120,14 @@ class UpdateDrugInfo(LoginRequiredMixin, UpdateView):
 class PharmacyDetail(LoginRequiredMixin, DetailView):
 	model = Pharmacy
 	template_name = 'hygeia/pharmacy_details.html'
+
+
+
+def purchase_item(request, pk):
+
+	try:
+		drug = Drug.objects.get(pk=pk)
+	except Exception as e:
+		messages.error(f'Drug does not exist')
+
+		return redirect('home')
