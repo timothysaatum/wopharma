@@ -1,0 +1,90 @@
+{% extends 'hygeia/base.html' %}
+{% load static %}
+{% block title %} consultation {% endblock title %}
+
+{% block content %}
+
+<!--Sticky_header-->
+{% include "./includes/sticky_header.html" %}
+
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+    <style>
+      .cascading-right {
+        margin-right: -50px;
+      }
+  
+      @media (max-width: 991.98px) {
+        .cascading-right {
+          margin-right: 0;
+        }
+      }
+    </style>
+  
+    <!-- Jumbotron -->
+    <div class="container py-4">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+            <div class="card-body p-5 shadow-5 text-center">
+              <h2 class="fw-bold mb-5">Book Consultation</h2>
+              <form>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <label style="text-align: left;" class="form-label">Name<em style="color: red;">*</em></label>
+
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" placeholder="First" id="form3Example2" class="form-control" required />
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" placeholder="Last" id="form3Example3" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Phone input -->
+                <div class="form-outline mb-4">
+                  <label class="form-label" style="float: left;" for="phone">Phone<em style="color: red;">*</em></label>
+                  <input id="phone" placeholder="Phone Number" class="form-control" required />
+                </div>
+                
+                
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <label class="form-label" style="float: left;" for="form3Example4">Email<em style="color: red;">*</em></label>
+                  <input type="email" id="form3Example4" placeholder="Enter your email number" class="form-control" required />
+                </div>
+
+              <!-- Additional Notes -->
+              <div class="form-outline mb-4">
+                <label class="form-label" style="float: left;" for="form3Example5">Message (optional)</label>
+                <textarea type="email" id="form3Example5" placeholder="You can add additional notes here" class="form-control" required></textarea>
+              </div>
+  
+                <!-- Submit button -->
+                <button style="float: left;" type="submit" class="btn btn-primary btn-block mb-4">
+                  submit
+                </button>
+  
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <img src="https://img.freepik.com/premium-photo/doctor-consulting-patient-healthcare-medication-prescription-diagnosis-cure-illness-pain-pharmacy-woman-medical-pharmacist-talking-customer-about-pills-drugs-clinic_590464-164097.jpg?size=626&ext=jpg&uid=R117257660&ga=GA1.2.2054625326.1695171530&semt=ais" class="w-100 rounded-4 shadow-4"
+            alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+  
+{% endblock content %}

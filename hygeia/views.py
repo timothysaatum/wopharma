@@ -26,4 +26,77 @@ def cart(request):
 
 def how_is_work(request):
 	return render(request, 'hygeia/how_is_works.html')
+
+def upload_prescription(request):
+	return render(request, 'hygeia/upload_prescription.html')
+
+def herbal_medicine(request):
+	return render(request, 'hygeia/herbal_medicine.html')
+
+def sundries(request):
+	return render(request, 'hygeia/sundries.html')
+
+def cosmetics(request):
+	return render(request, 'hygeia/cosmetics.html')
+
+def vitamins(request):
+	return render(request, 'hygeia/vitamins.html')
+
+def snacks_confec(request):
+	return render(request, 'hygeia/snacks_confec.html')
+
+def baby_food(request):
+	return render(request, 'hygeia/baby_food.html')
+
+def sex_enhance(request):
+	return render(request, 'hygeia/sex_enhance.html')
+
+def pharmacies(request):
+	return render(request, 'hygeia/pharmacies.html')
+
+def book_consult(request):
+	return render(request, 'hygeia/book_consult.html')
+
+def drug_details_page(request):
+	return render(request, 'hygeia/drug_details_page.html')
+
+def checkout(request):
+	return render(request, 'hygeia/checkout.html')
+
+def cart_page(request):
+	return render(request, 'hygeia/cart_page.html')
+
+def consultation(request):
+	return render(request, 'hygeia/consultation.html')
+
+def specialist(request):
+	return render(request, 'hygeia/specialist.html')
+
+def contact_us(request):
+	return render(request, 'hygeia/contact_us.html')
+
+def faqs(request):
+	return render(request, 'hygeia/faqs.html')
+
+def about(request):
+	return render(request, 'hygeia/about.html')
+
+def works(request):
+	return render(request, 'hygeia/how_it_works.html')
+
+def mission(request):
+	return render(request, 'hygeia/mission.html')
+
+def service(request):
+	return render(request, 'hygeia/services.html')
+
+def complaint(request):
+	return render(request, 'hygeia/complaint.html')
+
+def delivery(request):
+	return render(request, 'hygeia/delivery.html')	
+
+def data(request):
+	return render(request, 'hygeia/data_handling.html')												
+
 	

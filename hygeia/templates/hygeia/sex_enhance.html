@@ -1,0 +1,12 @@
+{% extends 'hygeia/base.html' %}
+{% load static %}
+{% block title %}Store | Wo'pharma{% endblock title %}
+
+{% block content %}
+{% include './includes/drugs_sticky_header.html' %}
+
+{% include './includes/store_items.html' %}
+
+{% include './includes/cart.html' %}
+
+{% endblock content %}

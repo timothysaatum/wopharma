@@ -1,0 +1,99 @@
+{% extends 'hygeia/base.html' %}
+{% load static %}
+{% block title %} Upload Prescription {% endblock title %}
+
+{% block content %}
+
+<!--Sticky_header-->
+{% include "./includes/sticky_header.html" %}
+
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+    <style>
+      .cascading-right {
+        margin-right: -50px;
+      }
+  
+      @media (max-width: 991.98px) {
+        .cascading-right {
+          margin-right: 0;
+        }
+      }
+    </style>
+  
+    <!-- Jumbotron -->
+    <div class="container py-4">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+            <div class="card-body p-5 shadow-5 text-center">
+              <h2 class="fw-bold mb-5">Personal Details</h2>
+              <form>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <label style="text-align: left;" class="form-label">Name<em style="color: red;">*</em></label>
+
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" placeholder="First" id="form3Example2" class="form-control" required />
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" placeholder="Last" id="form3Example3" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Phone input -->
+                <div class="form-outline mb-4">
+                  <label class="form-label" style="float: left;" for="phone">Phone<em style="color: red;">*</em></label>
+                  <input id="phone" placeholder="Phone Number" class="form-control" required />
+                </div>
+                
+                
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <label class="form-label" style="float: left;" for="form3Example4">Email<em style="color: red;">*</em></label>
+                  <input type="email" id="form3Example4" placeholder="Enter your email number" class="form-control" required />
+                </div>
+
+                <!-- File upload -->
+                <div class="form-outline mb-4">
+                  <label class="form-label" style="float: left;" for="filer_input2">File Upload<em style="color: red;">*</em></label><br><br>
+                <div class="Neon Neon-theme-dragdropbox">
+                  <input id="prescription" accept="image/*" style="z-index: 999; opacity: 0; width: 320px; height: 200px; position: absolute; right: 0px; left: 0px; margin-right: auto; margin-left: auto;" name="files[]" id="filer_input2" multiple="multiple" type="file" onchange="loadFile(event)" required>
+                  <div class="Neon-input-dragDrop"><div class="Neon-input-inner"><div class="Neon-input-icon"><i class="fa fa-file-image-o"></i></div><div class="Neon-input-text"><h3>Click or Drag&amp;Drop files here to upload</h3><img id="output" width="200" /><span style="display:inline-block; margin: 15px 0">Upload a valid prescription please!</span></div></div></div>
+                </div>
+              </div>
+
+              <!-- Additional Notes -->
+              <div class="form-outline mb-4">
+                <label class="form-label" style="float: left;" for="form3Example5">Add Notes</label>
+                <textarea type="email" id="form3Example5" placeholder="You can add additional notes here" class="form-control" required></textarea>
+              </div>
+  
+                <!-- Submit button -->
+                <button style="float: left;" type="submit" class="btn btn-primary btn-block mb-4">
+                  Send Prescription
+                </button>
+  
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <img src="https://content.pymnts.com/wp-content/uploads/2019/01/Click-And-Collect-Pharmacy.jpg" class="w-100 rounded-4 shadow-4"
+            alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+  
+{% endblock content %}
